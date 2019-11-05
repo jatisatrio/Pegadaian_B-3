@@ -20,16 +20,13 @@ public class MainAction {
 			System.out.println("4. Exit");
 			System.out.println("--------------------------------------------------------");
 			System.out.print("Opsi: ");
+			
 			try {
 				int opsi = in.nextInt();
 
 				if (opsi == 1) {
-					System.out.println("Detail Information\t");
-					System.out.println("==========================================");
-					System.out.println("Name\t\t\t: ");
-					System.out.println("Product Category\t: ");
-					System.out.println("Description\t\t: ");
-					System.out.println("Price\t\t\t: ");
+					gadai.MenuGadai();
+					
 				} else if (opsi == 2) {
 					System.out.println("__________________________________________");
 					System.out.println("|"+" ID "+"|"+" Product "+"|"+" Price "+"|"+" Status "+"|"+" Loan "+"|");
