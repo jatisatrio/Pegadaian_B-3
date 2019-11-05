@@ -7,6 +7,7 @@ public class gadai {
 	String produkbarang;
 	String deskripsi;
 	double harga;
+	double utang;
 
 	public static int idPelanggan = 1;
 		public static String catEmas = "emas";
@@ -116,6 +117,7 @@ public static void MenuGadai() {
 		{
 			bPrice = true;
 			dataGadai.harga = price;
+			dataGadai.utang = price;
 		}
 		else
 			System.out.println("harga tidak kelipatan 10000");

@@ -68,16 +68,12 @@ public class tebus {
 			return sisaHutang;
 		}
 		
-		public static void tampilanDataTebus (){
-			System.out.println("__________________________________________");
-			System.out.println("|" + " ID " + "|" + " Product " + "|" + " Price " + "|" + " Status " + "|"
-					+ " Loan " + "|");
-			System.out.println("___________________________________________");
-		}
+	
 
 		public static void showData() {
+			System.out.println("___________________________________________________________");
 			System.out.printf("%-4s | %-15s | %-6s | %-9s | %-5s |%n", "ID", "Product", "Price", "Status", "Utang");
-
+			System.out.println("___________________________________________________________");
 			for(Integer i = 0; i < gadai.arrayListData.size(); i++) {
 				System.out.printf("%-4s | %-15s | %-6s | %-9s | %-5s |%n", gadai.arrayListData.get(i).IdPelanggan, gadai.arrayListData.get(i).nama, gadai.arrayListData.get(i).harga, "-", gadai.arrayListData.get(i).utang);
 			}
@@ -100,7 +96,7 @@ public class tebus {
 			showData();
 			Scanner in = new Scanner(System.in);
 			try {
-				tampilanDataTebus();
+			
 				
 				while (true){
 					System.out.print("Masukkan ID barang yang ingin di tebus: \n");
@@ -111,7 +107,7 @@ public class tebus {
 						if (validateUtang(idBarang, angsuranUser)){
 							System.out.println("Pembayaran berhasil");
 						}
-						tampilanDataTebus();
+						showData();
 						break;
 					}
 				}
