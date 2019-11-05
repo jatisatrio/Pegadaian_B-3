@@ -6,6 +6,7 @@ public class gadai {
 	String nama;
 	String produkbarang;
 	String deskripsi;
+	boolean status;
 	double harga;
 
 	public static int idPelanggan = 1;
@@ -20,6 +21,14 @@ public String getNama() {
 public void setNama(String nama) {
 	this.nama = nama;
 }
+
+public boolean getStatus() {
+	return status;
+}
+public void setStatus(boolean status) {
+	this.status = status;
+}
+
 public String getProdukbarang() {
 	return produkbarang;
 }
@@ -121,6 +130,7 @@ public static void MenuGadai() {
 			System.out.println("harga tidak kelipatan 10000");
 	}
 			
+	dataGadai.status = false;
 	arrayListData.add(dataGadai);
 		
 }
