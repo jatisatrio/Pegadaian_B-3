@@ -69,6 +69,6 @@ public class tebus {
 			System.out.println("__________________________________________");
 			System.out.println("|" + " ID " + "|" + " Product " + "|" + " Price " + "|" + " Status " + "|"
 					+ " Loan " + "|");
-			System.out.println("__________________________________________");
+			System.out.println("___________________________________________");
 		}
 }
