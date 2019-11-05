@@ -75,6 +75,14 @@ public class tebus {
 			System.out.println("___________________________________________");
 		}
 
+		public static void showData() {
+			System.out.println("%-4s | %-15s | %-6s | %-9s | %-5s |%n", "ID", "Product", "Price", "Status", "Utang");
+
+			for(Integer i = 0; i < gadai.arrayListData.size(); i++) {
+				System.out.println("%-4s | %-15s | %-6s | %-9s | %-5s |%n", gadai.arrayListData.get(i).IdPelanggan, gadai.arrayListData.get(i).nama, gadai.arrayListData.get(i).harga, "-", gadai.arrayListData.get(i).utang);
+			}
+		}
+
 		public static boolean validateId(int id) {
 			boolean valid = false;
 			
@@ -86,10 +94,10 @@ public class tebus {
 			}
 			
 			return valid;
-		}
-		
+		}		
 		
 		public static void tampilan(){
+			showData();
 			Scanner in = new Scanner(System.in);
 			try {
 				tampilanDataTebus();
