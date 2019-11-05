@@ -1,5 +1,6 @@
 package com.pegadaian.sprint.oop;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class MainAction {
@@ -24,14 +25,16 @@ public class MainAction {
 				int opsi = in.nextInt();
 
 				if (opsi == 1) {
-					System.out.println("Detail Information\t");
-					System.out.println("=========================");
-					System.out.println("Name\t\t\t: ");
-					System.out.println("Product Category\t: ");
-					System.out.println("Description\t\t: ");
-					System.out.println("Price\t\t\t: ");
+					gadai.MenuGadai();
 				} else if (opsi == 2) {
-					System.out.println("ini pilihan 2");
+					tebus.tampilan();
+//					
+//				
+//					for (int i  = 0 ; i < gadai.arrayListData.size(); i++){
+//						System.out.println(gadai.arrayListData.get(i).IdPelanggan);
+//						System.out.println(gadai.arrayListData.get(i).nama);
+//					}
+				
 				} else if (opsi == 3) {
 					System.out.println("ini pilihan 3");
 				} else if (opsi == 4) {

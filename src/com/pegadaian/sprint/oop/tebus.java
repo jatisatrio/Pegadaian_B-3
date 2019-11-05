@@ -1,4 +1,7 @@
 package com.pegadaian.sprint.oop;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
 public class tebus {
 
@@ -65,7 +68,7 @@ public class tebus {
 			return sisaHutang;
 		}
 		
-		public void tampilanDataTebus (){
+		public static void tampilanDataTebus (){
 			System.out.println("__________________________________________");
 			System.out.println("|" + " ID " + "|" + " Product " + "|" + " Price " + "|" + " Status " + "|"
 					+ " Loan " + "|");
