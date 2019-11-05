@@ -38,7 +38,7 @@ public double getHarga() {
 public void setHarga(double harga) {
 	this.harga = harga;
 }
-public int getIdPelanggan() {
+public void getIdPelanggan(int idPelanggan) {
 	IdPelanggan = idPelanggan;
 }
 int IdPelanggan;
