@@ -73,7 +73,12 @@ public class tebus {
 			System.out.printf("%-4s | %-15s | %-8s | %-9s | %-9s |%n", "ID", "Product", "Price", "Status", "Utang");
 			System.out.println("___________________________________________________________");
 			for(Integer i = 0; i < gadai.arrayListData.size(); i++) {
-				System.out.printf("%-4s | %-15s | %-6s | %-9s | %-9s |%n", gadai.arrayListData.get(i).idPelanggan, gadai.arrayListData.get(i).nama, gadai.arrayListData.get(i).harga, gadai.arrayListData.get(i).status, gadai.arrayListData.get(i).hutang);
+				if (gadai.arrayListData.get(i).status.toUpperCase().equals("GADAI")){
+					System.out.printf("%-4s | %-15s | %-6s | %-9s | %-9s |%n", gadai.arrayListData.get(i).Id, gadai.arrayListData.get(i).nama, gadai.arrayListData.get(i).harga, gadai.arrayListData.get(i).status, gadai.arrayListData.get(i).hutang);
+				}
+					
+				
+				
 			}
 		}
 
@@ -81,7 +86,7 @@ public class tebus {
 			boolean valid = false;
 			
 			for(Integer i = 0; i < gadai.arrayListData.size(); i++) {
-				if(gadai.arrayListData.get(i).idPelanggan == id) {
+				if(gadai.arrayListData.get(i).Id == id) {
 					valid = true;
 					break;
 				}
@@ -129,7 +134,7 @@ public class tebus {
 			Boolean valid = false;
 			
 			for(Integer i = 0; i < gadai.arrayListData.size(); i++) {
-				if(gadai.arrayListData.get(i).idPelanggan == id) {
+				if(gadai.arrayListData.get(i).Id == id) {
 					if(utang <= gadai.arrayListData.get(i).hutang) {
 						valid = true;
 						gadai.arrayListData.get(i).hutang = gadai.arrayListData.get(i).hutang - utang;
