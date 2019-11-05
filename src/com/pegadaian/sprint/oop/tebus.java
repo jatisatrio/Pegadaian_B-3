@@ -71,4 +71,46 @@ public class tebus {
 					+ " Loan " + "|");
 			System.out.println("___________________________________________");
 		}
+		
+		public static Boolean validateId(Integer id) {
+			Boolean valid = false;
+			
+			for(Integer i = 0; i < gadai.arrayListData.size(); i++) {
+				if(gadai.arrayListData.get(i).IdPelanggan == id) {
+					valid = true;
+					break;
+				}
+			}
+			
+			return valid;
+		}
+		
+		public static Boolean validateHarga(Integer id, Integer harga) {
+			Boolean valid = false;
+			
+			for(Integer i = 0; i < gadai.arrayListData.size(); i++) {
+				if(gadai.arrayListData.get(i).IdPelanggan == id) {
+					if(gadai.arrayListData.get(i).harga <= harga) {
+						valid = true;
+						break;
+					}
+				}
+			}
+			
+			return valid;
+		}
+		
+		public static Boolean validateUtang(Integer id, Integer utang) {
+			Boolean valid = false;
+			
+			for(Integer i = 0; i < gadai.arrayListData.size(); i++) {
+				if(gadai.arrayListData.get(i).IdPelanggan == id) {
+					if(gadai.arrayListData.get(i).utang <= utang) {
+						valid = true;
+						gadai.arrayListData.get(i).utang = gadai.arrayListData.get(i).utang - utang;
+						break;
+					}
+				}
+			}
+		}
 }
