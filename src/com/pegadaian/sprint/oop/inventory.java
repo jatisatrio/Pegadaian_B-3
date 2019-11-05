@@ -28,5 +28,45 @@ public class inventory {
 		}
 	}
 	
+	static void printHeader() {
+        String leftAlignFormat = "| %-15s | %-6s | %-9s | %-5s | %-7s |%n";
+
+        printLine();
+        System.out.format(leftAlignFormat, "ID", "Nama", "Produk", "Deskripsi", "Harga");
+        printLine();
+    }
+
+    static void printLine() {
+        System.out.format("+-----------------+--------+-----------+-----------+---------+%n");
+    }
+
+    void printRow() {
+        String leftAlignFormat = "| %-15s | %-5s | %-9s | %-5d |%n";
+        System.out.format(leftAlignFormat, IdPelanggan, nama, produk, Deskripsi, Harga);
+    }
 	
+	public String getNama() {
+		return nama;
+	}
+	public void setNama(String nama) {
+		this.nama = nama;
+	}
+	public String getProduk() {
+		return produk;
+	}
+	public void setProduk(String produk) {
+		this.produk = produk;
+	}
+	public String getDeskripsi() {
+		return Deskripsi;
+	}
+	public void setDeskripsi(String deskripsi) {
+		Deskripsi = deskripsi;
+	}
+	public Double getHarga() {
+		return Harga;
+	}
+	public void setHarga(Double harga) {
+		Harga = harga;
+	}
 }
