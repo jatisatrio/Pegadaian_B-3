@@ -67,8 +67,6 @@ public class tebus {
 			double sisaHutang = this.utang - angsuran;
 			return sisaHutang;
 		}
-		
-	
 
 		public static void showData() {
 			System.out.println("___________________________________________________________");
@@ -94,43 +92,37 @@ public class tebus {
 		
 		public static void tampilan(){
 			showData();
-			Scanner in = new Scanner(System.in);
-			try {
 			
-				
-				while (true){
-					System.out.print("Masukkan ID barang yang ingin di tebus: \n");
+			Boolean condition = false;
+			Scanner in = new Scanner(System.in);
+			
+			while(! condition) {
+				System.out.print("Masukkan ID barang yang ingin di tebus: \n");
+				try {
 					int idBarang = in.nextInt();
+					
 					if (validateId(idBarang)){
 						System.out.println("Masukkan biaya yang ingin diterima: ");
 						double angsuranUser = in.nextDouble();
 						if (validateUtang(idBarang, angsuranUser)){
+							condition = true;
 							System.out.println("Pembayaran berhasil");
+							showData();
 						}
-						showData();
-						break;
+						else {
+							System.out.println("Nominal tidak boleh lebih dari utang");
+						}
+					}
+					else {
+						System.out.println("Barang Tidak Ditemukan");
 					}
 				}
-				
-			} catch (Exception e){
-				System.out.println("Maaf input anda salah!");
-			}
-			
-		}
-		
-		public static boolean validateHarga(int id, int harga) {
-			boolean valid = false;
-			
-			for(Integer i = 0; i < gadai.arrayListData.size(); i++) {
-				if(gadai.arrayListData.get(i).IdPelanggan == id) {
-					if(gadai.arrayListData.get(i).harga <= harga) {
-						valid = true;
-						break;
-					}
+				catch(Exception e) {
+					System.out.println("Maaf input anda salah!");
+					break;
 				}
 			}
 			
-			return valid;
 		}
 		
 		public static boolean validateUtang(int id, double utang) {
