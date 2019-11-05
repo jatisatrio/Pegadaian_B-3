@@ -20,28 +20,30 @@ public class MainAction {
 			System.out.println("4. Exit");
 			System.out.println("--------------------------------------------------------");
 			System.out.print("Opsi: ");
-			try {
-				int opsi = in.nextInt();
+			
+			boolean bMenu = false;
+			while (!bMenu)
+			{
+				try {
+					int opsi = in.nextInt();
 
-				if (opsi == 1) {
-					System.out.println("Detail Information\t");
-					System.out.println("=========================");
-					System.out.println("Name\t\t\t: ");
-					System.out.println("Product Category\t: ");
-					System.out.println("Description\t\t: ");
-					System.out.println("Price\t\t\t: ");
-				} else if (opsi == 2) {
-					System.out.println("ini pilihan 2");
-				} else if (opsi == 3) {
-					System.out.println("ini pilihan 3");
-				} else if (opsi == 4) {
-					System.exit(0);
+					if (opsi == 1) {
+						gadai.MenuGadai();
+						bMenu = true;
+					} else if (opsi == 2) {
+						System.out.println("ini pilihan 2");
+					} else if (opsi == 3) {
+						System.out.println("ini pilihan 3");
+					} else if (opsi == 4) {
+						System.exit(0);
+					}
+				} catch (Exception e) {
+					System.out.println("Maaf input anda salah! Silahkan ulangi kembali!");
 				}
-			} catch (Exception e) {
-				System.out.println("Maaf input anda salah! Silahkan ulangi kembali!");
-			}
 
-		}
+			}
+			}
+			
 
 	}
 
