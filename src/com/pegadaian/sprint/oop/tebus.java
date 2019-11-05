@@ -142,7 +142,7 @@ public class tebus {
 						if(gadai.arrayListData.get(i).hutang == 0) {
 							gadai.arrayListData.get(i).status = "Lunas";
 						}
-						
+	 					
 						break;
 					}
 				}

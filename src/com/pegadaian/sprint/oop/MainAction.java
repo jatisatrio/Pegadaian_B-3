@@ -28,15 +28,8 @@ public class MainAction {
 					gadai.MenuGadai();
 				} else if (opsi == 2) {
 					tebus.tampilan();
-//					
-//				
-//					for (int i  = 0 ; i < gadai.arrayListData.size(); i++){
-//						System.out.println(gadai.arrayListData.get(i).IdPelanggan);
-//						System.out.println(gadai.arrayListData.get(i).nama);
-//					}
-				
 				} else if (opsi == 3) {
-					System.out.println("ini pilihan 3");
+					inventory.inventory();
 				} else if (opsi == 4) {
 					System.exit(0);
 				}
