@@ -6,7 +6,25 @@ public class inventory {
 	String produk;
 	String deskripsi;
 	Double harga;
+<<<<<<< HEAD
 	
+=======
+
+//formatting
+	static void namaKolom() {
+		String formatter = "| %-15s | %-6s | %-10s | %-5s |%n";
+        System.out.println("-------------------------------------------------");
+        System.out.format(formatter,"ID", "Nama", "Product", "Description","Price");
+        System.out.println("-------------------------------------------------");
+    }
+	
+    void dataTable() {
+        String formatter = "| %-15s | %-5s | %-10s | %-5d |%n";
+        System.out.format(formatter, IdPelanggan, nama, produk, deskripsi, harga);
+    }
+	
+//setter getter
+>>>>>>> b6082f5b080040f78e36f0b8a9f4ea43477850fd
 	public int getIdPelanggan() {
 		return IdPelanggan;
 	}
