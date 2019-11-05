@@ -2,9 +2,25 @@ package com.pegadaian.sprint.oop;
 
 public class inventory {
 	int IdPelanggan;
+	String nama;
 	String produk;
 	String deskripsi;
 	Double harga;
+
+//formatting
+	static void namaKolom() {
+		String formatter = "| %-15s | %-6s | %-10s | %-5s |%n";
+        System.out.println("-------------------------------------------------");
+        System.out.format(formatter,"ID", "Nama", "Product", "Description","Price");
+        System.out.println("-------------------------------------------------");
+    }
+	
+    void dataTable() {
+        String formatter = "| %-15s | %-5s | %-10s | %-5d |%n";
+        System.out.format(formatter, IdPelanggan, nama, produk, deskripsi, harga);
+    }
+	
+//setter getter
 	public int getIdPelanggan() {
 		return IdPelanggan;
 	}
