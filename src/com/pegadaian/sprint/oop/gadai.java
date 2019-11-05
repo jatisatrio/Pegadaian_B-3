@@ -6,9 +6,12 @@ public class gadai {
 	String nama;
 	String produkbarang;
 	String deskripsi;
+	String status;
 	double harga;
+	double hutang;
+	int Id;
 
-	public static int idPelanggan = 1;
+	public static int idPelanggan = 0;
 		public static String catEmas = "emas";
 		public static String catLaptop = "laptop";
 		public static String catMotor = "motor";
@@ -20,6 +23,14 @@ public String getNama() {
 public void setNama(String nama) {
 	this.nama = nama;
 }
+
+public String getStatus() {
+	return status;
+}
+public void setStatus(String status) {
+	this.status = status;
+}
+
 public String getProdukbarang() {
 	return produkbarang;
 }
@@ -38,10 +49,18 @@ public double getHarga() {
 public void setHarga(double harga) {
 	this.harga = harga;
 }
-public void getIdPelanggan(int idPelanggan) {
-	IdPelanggan = idPelanggan;
+public double getHutang() {
+	return hutang;
 }
-int IdPelanggan;
+public void setHutang(double hutang) {
+	this.hutang = hutang;
+}
+public int getIdPelanggan() {
+	return Id;
+}
+public void setIdPelanggan(int idPelanggan) {
+	this.Id = idPelanggan;
+}
 
 public static void MenuGadai() {
 	
@@ -52,7 +71,7 @@ public static void MenuGadai() {
 	System.out.println("=========================");
 	System.out.print("Name\t\t\t: ");
 	
-	dataGadai.idPelanggan = idPelanggan;
+	dataGadai.Id = idPelanggan;
 	idPelanggan++;
 	
 	boolean bName = false;
@@ -116,12 +135,17 @@ public static void MenuGadai() {
 		{
 			bPrice = true;
 			dataGadai.harga = price;
+			dataGadai.hutang = price;
 		}
 		else
 			System.out.println("harga tidak kelipatan 10000");
 	}
+	
+	
 			
+	dataGadai.status = "gadai";
+	
 	arrayListData.add(dataGadai);
-		
+		System.out.println(dataGadai.harga);
 }
 }
