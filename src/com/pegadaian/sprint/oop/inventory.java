@@ -6,9 +6,6 @@ public class inventory {
 	String produk;
 	String deskripsi;
 	Double harga;
-<<<<<<< HEAD
-	
-=======
 
 //formatting
 	static void namaKolom() {
@@ -24,7 +21,6 @@ public class inventory {
     }
 	
 //setter getter
->>>>>>> b6082f5b080040f78e36f0b8a9f4ea43477850fd
 	public int getIdPelanggan() {
 		return IdPelanggan;
 	}
