@@ -2,9 +2,11 @@ package com.pegadaian.sprint.oop;
 
 public class inventory {
 	int IdPelanggan;
+	String nama;
 	String produk;
 	String deskripsi;
 	Double harga;
+	
 	public int getIdPelanggan() {
 		return IdPelanggan;
 	}
