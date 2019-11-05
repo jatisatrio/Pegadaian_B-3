@@ -74,9 +74,9 @@ public class tebus {
 					+ " Loan " + "|");
 			System.out.println("___________________________________________");
 		}
-		
-		public static Boolean validateId(Integer id) {
-			Boolean valid = false;
+
+		public static boolean validateId(int id) {
+			boolean valid = false;
 			
 			for(Integer i = 0; i < gadai.arrayListData.size(); i++) {
 				if(gadai.arrayListData.get(i).IdPelanggan == id) {
@@ -88,8 +88,34 @@ public class tebus {
 			return valid;
 		}
 		
-		public static Boolean validateHarga(Integer id, Integer harga) {
-			Boolean valid = false;
+		
+		public static void tampilan(){
+			Scanner in = new Scanner(System.in);
+			try {
+				tampilanDataTebus();
+				
+				while (true){
+					System.out.print("Masukkan ID barang yang ingin di tebus: \n");
+					int idBarang = in.nextInt();
+					if (validateId(idBarang)){
+						System.out.println("Masukkan biaya yang ingin diterima: ");
+						double angsuranUser = in.nextDouble();
+						if (validateUtang(idBarang, angsuranUser)){
+							System.out.println("Pembayaran berhasil");
+						}
+						tampilanDataTebus();
+						break;
+					}
+				}
+				
+			} catch (Exception e){
+				System.out.println("Maaf input anda salah!");
+			}
+			
+		}
+		
+		public static boolean validateHarga(int id, int harga) {
+			boolean valid = false;
 			
 			for(Integer i = 0; i < gadai.arrayListData.size(); i++) {
 				if(gadai.arrayListData.get(i).IdPelanggan == id) {
@@ -103,7 +129,7 @@ public class tebus {
 			return valid;
 		}
 		
-		public static Boolean validateUtang(Integer id, Integer utang) {
+		public static boolean validateUtang(int id, double utang) {
 			Boolean valid = false;
 			
 			for(Integer i = 0; i < gadai.arrayListData.size(); i++) {
@@ -115,5 +141,6 @@ public class tebus {
 					}
 				}
 			}
+			return valid;
 		}
 }
