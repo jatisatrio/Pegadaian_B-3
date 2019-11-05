@@ -72,10 +72,10 @@ public class tebus {
 
 		public static void showData() {
 			System.out.println("___________________________________________________________");
-			System.out.printf("%-4s | %-15s | %-6s | %-9s | %-5s |%n", "ID", "Product", "Price", "Status", "Utang");
+			System.out.printf("%-4s | %-15s | %-8s | %-9s | %-9s |%n", "ID", "Product", "Price", "Status", "Utang");
 			System.out.println("___________________________________________________________");
 			for(Integer i = 0; i < gadai.arrayListData.size(); i++) {
-				System.out.printf("%-4s | %-15s | %-6s | %-9s | %-5s |%n", gadai.arrayListData.get(i).IdPelanggan, gadai.arrayListData.get(i).nama, gadai.arrayListData.get(i).harga, "-", gadai.arrayListData.get(i).utang);
+				System.out.printf("%-4s | %-15s | %-6s | %-9s | %-9s |%n", gadai.arrayListData.get(i).IdPelanggan, gadai.arrayListData.get(i).nama, gadai.arrayListData.get(i).harga, gadai.arrayListData.get(i).status, gadai.arrayListData.get(i).utang);
 			}
 		}
 
@@ -138,9 +138,14 @@ public class tebus {
 			
 			for(Integer i = 0; i < gadai.arrayListData.size(); i++) {
 				if(gadai.arrayListData.get(i).IdPelanggan == id) {
-					if(gadai.arrayListData.get(i).utang <= utang) {
+					if(utang <= gadai.arrayListData.get(i).utang) {
 						valid = true;
 						gadai.arrayListData.get(i).utang = gadai.arrayListData.get(i).utang - utang;
+						
+						if(gadai.arrayListData.get(i).utang == 0) {
+							gadai.arrayListData.get(i).status = "Lunas";
+						}
+						
 						break;
 					}
 				}
