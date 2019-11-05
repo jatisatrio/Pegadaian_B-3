@@ -8,11 +8,11 @@ double harga;
 
 public gadai(String nama, String produkbarang, String deskripsi, double harga, int idPelanggan) {
 	super();
-	this.nama = nama;
-	this.produkbarang = produkbarang;
-	this.deskripsi = deskripsi;
-	this.harga = harga;
-	IdPelanggan = idPelanggan;
+	this.nama 			= nama;
+	this.produkbarang 	= produkbarang;
+	this.deskripsi 		= deskripsi;
+	this.harga 			= harga;
+	IdPelanggan 		= idPelanggan;
 }
 public String getNama() {
 	return nama;
