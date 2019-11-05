@@ -1,4 +1,6 @@
 package com.pegadaian.sprint.oop;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class tebus {
@@ -89,7 +91,7 @@ public class tebus {
 		public static  void tampilan (){
 			Scanner in = new Scanner (System.in);
 			int[] id = {1,2};
-			try {
+			 try {
 				tampilanDataTebus();
 				
 				while (true){
