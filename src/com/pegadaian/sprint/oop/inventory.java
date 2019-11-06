@@ -29,7 +29,10 @@ public class inventory {
 //	}
 	
 	public static void inventory() {
-		if (gadai.arrayListData.isEmpty()) {
+		
+		Integer countGadai = 0;
+		
+		if (gadai.arrayListData.size() == 0) {
 			System.out.println("Tidak ada barang gadai di inventori");
 		} else {
 			System.out.println("_________________________________________________________");
@@ -37,12 +40,15 @@ public class inventory {
 			System.out.println("_________________________________________________________");
 			for (Integer i = 0; i < gadai.arrayListData.size(); i++) {
 				if (gadai.arrayListData.get(i).status.toUpperCase().equals("GADAI")) {
+					countGadai++;
 					System.out.printf("%-4s | %-9s | %-8s | %-14s | %-9s |%n", gadai.arrayListData.get(i).Id,
 							gadai.arrayListData.get(i).nama, gadai.arrayListData.get(i).produkbarang,
 							gadai.arrayListData.get(i).deskripsi, gadai.arrayListData.get(i).harga);
-				} else if (!gadai.arrayListData.get(i).status.toUpperCase().equals("GADAI")) {
-					System.out.println("Tidak ada barang gadai di inventori");
 				}
+			}
+			
+			if(countGadai == 0) {
+				System.out.println("Tidak ada barang gadai di inventori");
 			}
 		}
 	}	

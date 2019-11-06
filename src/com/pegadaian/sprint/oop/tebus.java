@@ -86,7 +86,7 @@ public class tebus {
 			boolean valid = false;
 			
 			for(Integer i = 0; i < gadai.arrayListData.size(); i++) {
-				if(gadai.arrayListData.get(i).Id == id) {
+				if(gadai.arrayListData.get(i).Id == id && gadai.arrayListData.get(i).status.toUpperCase().equals("GADAI")) {
 					valid = true;
 					break;
 				}
