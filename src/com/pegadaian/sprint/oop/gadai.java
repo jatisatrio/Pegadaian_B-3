@@ -1,6 +1,8 @@
 package com.pegadaian.sprint.oop;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Scanner;
+
 
 public class gadai {
 	String nama;
@@ -91,7 +93,7 @@ public static void MenuGadai() {
 			
 	}
 		
-	System.out.println("Product Category\t: ");
+	System.out.print("Product Category\t: ");
 	
 	boolean bCategory = false;
 	String category;
@@ -107,7 +109,7 @@ public static void MenuGadai() {
 			System.out.println("kategori bukan emas, laptop atau motor");
 	}
 	
-	System.out.println("Description\t\t: ");
+	System.out.print("Description\t\t: ");
 	
 	boolean bDescription = false;
 	String description;
@@ -124,7 +126,7 @@ public static void MenuGadai() {
 	}
 	
 	
-	System.out.println("Price\t\t\t: ");
+	System.out.print("Price\t\t\t: ");
 	
 	boolean bPrice = false;
 	double price;
