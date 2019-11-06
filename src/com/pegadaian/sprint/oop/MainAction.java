@@ -32,6 +32,7 @@ public class MainAction {
 				} else if (opsi == 3) {
 					inventory.inventory();
 				} else if (opsi == 4) {
+					System.out.println("Exit");
 					System.exit(0);
 				}
 			} catch (Exception e) {
