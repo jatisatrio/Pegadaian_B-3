@@ -91,7 +91,7 @@ public static void MenuGadai() {
 			
 	}
 		
-	System.out.println("Product Category\t: ");
+	System.out.print("Product Category\t: ");
 	
 	boolean bCategory = false;
 	String category;
@@ -104,10 +104,10 @@ public static void MenuGadai() {
 			dataGadai.produkbarang = category;
 			}
 		else
-			System.out.println("kategori bukan emas, laptop atau motor");
+			System.out.print("kategori bukan emas, laptop atau motor");
 	}
 	
-	System.out.println("Description\t\t: ");
+	System.out.print("Description\t\t: ");
 	
 	boolean bDescription = false;
 	String description;
@@ -124,7 +124,7 @@ public static void MenuGadai() {
 	}
 	
 	
-	System.out.println("Price\t\t\t: ");
+	System.out.print("Price\t\t\t: ");
 	
 	boolean bPrice = false;
 	double price;
@@ -146,6 +146,6 @@ public static void MenuGadai() {
 	dataGadai.status = "gadai";
 	
 	arrayListData.add(dataGadai);
-		System.out.println(dataGadai.harga);
+		
 }
 }
