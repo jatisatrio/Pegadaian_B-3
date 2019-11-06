@@ -1,5 +1,6 @@
 package com.pegadaian.sprint.oop;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class MainAction {
@@ -26,19 +27,10 @@ public class MainAction {
 
 				if (opsi == 1) {
 					gadai.MenuGadai();
-					
 				} else if (opsi == 2) {
-					System.out.println("__________________________________________");
-					System.out.println("|"+" ID "+"|"+" Product "+"|"+" Price "+"|"+" Status "+"|"+" Loan "+"|");
-					System.out.println("__________________________________________");
-					System.out.print("Masukkan ID barang yang ingin di tebus: \n");
-					int idBarang = in.nextInt();
-					System.out.println("Masukkan biaya yang ingin diterima: ");
-					double angsuranUser = in.nextDouble();
+					tebus.tampilan();
 				} else if (opsi == 3) {
-					System.out.println("___________________________________________");
-					System.out.println("|"+" ID "+"|"+" Name "+"|"+" Product "+"|"+" Description "+"|"+" Price "+"|");
-					System.out.println("___________________________________________");
+					inventory.inventory();
 				} else if (opsi == 4) {
 					System.exit(0);
 				}
