@@ -32,8 +32,10 @@ public class inventory {
 		if (gadai.arrayListData.isEmpty()) {
 			System.out.println("Tidak ada barang gadai di inventori");
 		} else {
+			System.out.println("_______");
+			System.out.printf("%-4s | %-15s | %-8s | %-9s | %-9s |%n", "ID", "Nama", "Product", "Description", "Price");
+			System.out.println("_______");
 			for (Integer i = 0; i < gadai.arrayListData.size(); i++) {
-
 				if (gadai.arrayListData.get(i).status.toUpperCase().equals("GADAI")) {
 					System.out.printf("%-4s | %-15s | %-6s | %-9s | %-9s |%n", gadai.arrayListData.get(i).Id,
 							gadai.arrayListData.get(i).nama, gadai.arrayListData.get(i).produkbarang,
